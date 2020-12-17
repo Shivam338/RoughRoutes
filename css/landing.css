@@ -1,0 +1,82 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://i.pinimg.com/originals/90/e5/59/90e559049852fd4a9b64a0acff5b9f03.jpg);
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(/images/Treking.jpg);
+  animation-delay: 8.5s;
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(/images/BunjiJumping.jpg);
+  animation-delay: 17s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(/images/MountainBiking.jpg);
+  animation-delay: 25.5s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(/images/Safari.jpg);
+  animation-delay: 34s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  5% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  15% {
+    opacity: 1
+  }
+  20% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - class added by modernizer */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
